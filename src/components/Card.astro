@@ -1,0 +1,64 @@
+---
+export interface Props {
+  title: string
+  body: string
+  icon: string
+  pack: string
+}
+
+const { icon, title, body, pack } = Astro.props
+
+import { Icon } from 'astro-icon'
+---
+
+<li class='link-card'>
+  <Icon pack={pack} name={icon} height='7rem' />
+  <h2>
+    {title}
+  </h2>
+  <p>
+    {body}
+  </p>
+</li>
+
+<style>
+  li {
+    list-style-type: none;
+  }
+
+  li:first-of-type,
+  li:first-of-type * {
+    color: #fff;
+    background: var(--clr-primary);
+  }
+
+  [astro-icon] {
+    color: var(--clr-primary);
+  }
+
+  .link-card {
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    flex-basis: 23%;
+  }
+
+  h2 {
+    margin: 5rem 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #212529;
+  }
+  p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #676767;
+  }
+</style>

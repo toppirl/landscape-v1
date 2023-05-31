@@ -1,0 +1,74 @@
+---
+import navData from '../data/navData'
+---
+
+<header>
+  <a href='#' class='logo'>Logo</a>
+  <nav>
+    <ul>
+      {navData.map((item) => <a href={item.path}>{item.name}</a>)}
+    </ul>
+    <a href='#' class='btn nav--cta'>Call us</a>
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 9.6rem;
+    font-family: var(--ff-primary);
+    background: #fff;
+    padding: 0 6.4rem;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  .logo {
+    font-size: 4rem;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 4.8rem;
+  }
+
+  ul a {
+    display: inline-block;
+    font-size: 2rem;
+    /* transition: all 0.3s; */
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--fc-dark);
+  }
+
+  ul a:hover {
+    color: var(--clr-primary);
+    border-bottom: 2px solid var(--clr-primary);
+  }
+
+  nav > a:last-child {
+    margin-left: 4.8rem;
+  }
+
+  .nav--cta:link,
+  .nav--cta:visited {
+    background: var(--clr-primary);
+    color: var(--fc-light);
+    padding: 1.2rem 2.4rem;
+    border-radius: 5px;
+  }
+
+  .nav--cta:hover,
+  .nav--cta:active {
+    background: #005c0a;
+  }
+</style>
