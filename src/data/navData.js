@@ -18,6 +18,10 @@ const navData = [
     {
         name: "Contact",
         path: "/contact"
+    },
+    {
+        name: "Call Us",
+        path: "/contact-form"
     }
 ]
 

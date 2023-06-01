@@ -169,8 +169,29 @@ Tints:
 }
 
 /**************************/
-/*        Navigation      */
+/*   Header / Navigation  */
 /**************************/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: 9.6rem;
+  font-family: var(--ff-primary);
+  background: #fff;
+  padding: 0 6.4rem;
+}
+
+.navbar-nav {
+  display: flex;
+}
+
+.logo {
+  font-size: 4rem;
+  text-decoration: none;
+  color: var(--fc-dark);
+}
 
 .hamburger {
   padding-right: 20px;
@@ -187,7 +208,7 @@ Tints:
 }
 
 .main-nav {
-  display: flex;
+  display: none;
   align-items: center;
   list-style: none;
   gap: 4.8rem;
@@ -210,23 +231,25 @@ Tints:
   margin-left: 4.8rem;
 }
 
-.nav--cta:link,
-.nav--cta:visited {
+.main-nav-links:last-child:link,
+.main-nav-links:last-child:visited {
   background: var(--clr-primary);
   color: var(--fc-light);
   padding: 1.2rem 2.4rem;
   border-radius: 5px;
 }
 
-.nav--cta:hover,
-.nav--cta:active {
+.main-nav-links:last-child:hover,
+.main-nav-links:last-child:active {
   background: #005c0a;
 }
 
 @media screen and (min-width: 636px) {
-
   .hamburger {
     display: none;
   }
 
+  .main-nav {
+    display: flex;
+  }
 }
