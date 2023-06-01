@@ -194,6 +194,7 @@ Tints:
 }
 
 .hamburger {
+  display: none;
   padding-right: 20px;
   cursor: pointer;
 }
@@ -207,8 +208,8 @@ Tints:
   background-color: #ff9776;
 }
 
-.main-nav {
-  display: none;
+.main-nav-list {
+  display: flex;
   align-items: center;
   list-style: none;
   gap: 4.8rem;
@@ -227,7 +228,7 @@ Tints:
   border-bottom: 2px solid var(--clr-primary);
 }
 
-.main-nav+a:last-child {
+.main-nav-list+a:last-child {
   margin-left: 4.8rem;
 }
 
@@ -245,12 +246,59 @@ Tints:
   border: none;
 }
 
-@media screen and (min-width: 636px) {
+
+/**************************/
+/*      Media Queries     */
+/**************************/
+
+/**************************/
+/*       Below 544px      */
+/*        (Phones)        */
+/**************************/
+@media (max-width: 34em) {
+
+  /* Mobile Navigation */
   .hamburger {
-    display: none;
+    display: block;
+    z-index: 3;
   }
 
   .main-nav {
+    background: rgba(0, 0, 0, .9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
     display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 1;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+  }
+
+  .main-nav-links {
+    color: #fff;
+    font-size: 3rem;
+  }
+
+  .header {
+    padding: 0 2.4rem;
   }
 }
