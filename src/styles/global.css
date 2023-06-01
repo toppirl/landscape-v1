@@ -205,7 +205,7 @@ Tints:
   height: 5px;
   margin-bottom: 10px;
   border-radius: 5px;
-  background-color: #ff9776;
+  background-color: var(--clr-primary);
 }
 
 .main-nav-list {
@@ -252,10 +252,9 @@ Tints:
 /**************************/
 
 /**************************/
-/*       Below 544px      */
-/*        (Phones)        */
+/*       Below 1024px     */
 /**************************/
-@media (max-width: 34em) {
+@media (max-width: 64em) {
 
   /* Mobile Navigation */
   .hamburger {
@@ -297,6 +296,18 @@ Tints:
     color: #fff;
     font-size: 3rem;
   }
+}
+
+
+
+
+
+
+/**************************/
+/*       Below 544px      */
+/*        (Phones)        */
+/**************************/
+@media (max-width: 34em) {
 
   .header {
     padding: 0 2.4rem;
