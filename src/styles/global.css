@@ -510,6 +510,7 @@ Tints:
 .whyUs-text {
   width: 50%;
   justify-items: flex-end;
+  flex-shrink: 0;
 }
 
 .section-whyUs h2 {
@@ -554,6 +555,7 @@ Tints:
 
 .section-whyUs [astro-icon] {
   color: #fff;
+  height: 4rem;
 }
 
 .section-whyUs a {
@@ -800,6 +802,14 @@ figure {
 
 .about-text a {
   align-self: center;
+}
+
+.footer-cta h2 {
+  font-size: 3.5rem;
+}
+
+.footer-container {
+  text-align: center;
 }
 
 /**************************/
