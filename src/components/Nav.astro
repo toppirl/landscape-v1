@@ -15,7 +15,6 @@ import navData from '../data/navData'
 <style>
   .main-nav-list {
     display: flex;
-    flex-direction: row;
     align-items: center;
     list-style: none;
     gap: 4.8rem;
@@ -59,9 +58,6 @@ import navData from '../data/navData'
   }
 
   @media (max-width: 64em) {
-  }
-
-  @media (max-width: 34em) {
     .main-nav-list {
       flex-direction: column;
     }
@@ -70,5 +66,8 @@ import navData from '../data/navData'
       color: #fff;
       font-size: 3rem;
     }
+  }
+
+  @media (max-width: 34em) {
   }
 </style>
