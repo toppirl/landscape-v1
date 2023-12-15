@@ -2,7 +2,7 @@
 import navData from '../data/navData'
 ---
 
-<ul class='main-nav-list' role="list">
+<ul class='main-nav-list' role='list'>
   {
     navData.map((item) => (
       <a href={item.path} class='main-nav-links'>
@@ -11,3 +11,64 @@ import navData from '../data/navData'
     ))
   }
 </ul>
+
+<style>
+  .main-nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    gap: 4.8rem;
+  }
+
+  .main-nav-links {
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--fc-dark);
+    /* transition: all 0.3s; */
+  }
+
+  .main-nav-links:hover {
+    color: var(--clr-primary);
+    border-bottom: 2px solid var(--clr-primary);
+  }
+
+  .main-nav-list + a:last-child {
+    margin-left: 4.8rem;
+  }
+
+  .main-nav-links:last-child:link,
+  .main-nav-links:last-child:visited {
+    background: var(--clr-primary);
+    color: var(--fc-light);
+    padding: 1.2rem 2.4rem;
+    border-radius: 5px;
+  }
+
+  .main-nav-links:last-child:hover,
+  .main-nav-links:last-child:active {
+    background: #005c0a;
+    border: none;
+  }
+
+  @media (max-width: 83em) {
+  }
+
+  @media (max-width: 75em) {
+  }
+
+  @media (max-width: 64em) {
+  }
+
+  @media (max-width: 34em) {
+    .main-nav-list {
+      flex-direction: column;
+    }
+
+    .main-nav-links {
+      color: #fff;
+      font-size: 3rem;
+    }
+  }
+</style>

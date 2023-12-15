@@ -41,3 +41,105 @@ import { Icon } from 'astro-icon'
     </div>
   </div>
 </section>
+
+<style>
+  .section-whyUs {
+    background-color: #0c4b35;
+    padding: 9.6rem 0;
+    position: relative;
+  }
+
+  .section-whyUs::before {
+    display: none;
+  }
+
+  .section-whyUs::after {
+    content: url('/img/whyUsleft.png');
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    rotate: 180deg;
+  }
+
+  .section-whyUs .container {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 6rem;
+    gap: 2rem;
+    font-family: var(--ff-primary);
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .section-whyUs img {
+    height: 100%;
+  }
+
+  .whyUs-img {
+    position: relative;
+    z-index: 2;
+  }
+
+  .whyUs-text {
+    width: 50%;
+    justify-items: flex-end;
+    flex-shrink: 0;
+  }
+
+  .section-whyUs h2 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 6.1rem;
+    padding-bottom: 2rem;
+    color: #fff;
+  }
+
+  .section-whyUs p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    color: #fff;
+    padding-bottom: 2rem;
+  }
+
+  .section-whyUs ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style-type: none;
+    justify-items: center;
+    align-items: center;
+    gap: 3rem;
+    color: #fff;
+    padding: 5rem 0;
+  }
+
+  .section-whyUs li {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .section-whyUs li span {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.3rem;
+    padding-left: 3rem;
+  }
+
+  .section-whyUs [astro-icon] {
+    color: #fff;
+    height: 4rem;
+  }
+
+  .section-whyUs a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 1.3rem 3.5rem;
+    background: var(--clr-primary);
+    border-radius: 0.5rem;
+  }
+</style>

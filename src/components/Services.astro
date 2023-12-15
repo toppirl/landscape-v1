@@ -64,11 +64,25 @@ import Card from '../components/Card.astro'
 </section>
 
 <style>
-  
+  .section-services {
+    background-color: #e5e5e5;
+    font-family: var(--ff-primary);
+    padding: 9.6rem 0;
+  }
+  .section-services .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-services h2 {
+    font-size: 2.4rem;
+    color: var(--fc-dark);
+    font-weight: 800;
+  }
   .section-services span {
     color: var(--clr-primary);
   }
-
   .section-services p {
     font-weight: 400;
     font-size: 1.8rem;
@@ -78,5 +92,35 @@ import Card from '../components/Card.astro'
     color: #676767;
     max-width: 60ch;
     align-self: center;
+  }
+
+  /**************************/
+  /*      Below 1328px      */
+  /*     (Small Laptops)    */
+  /**************************/
+  @media (max-width: 83em) {
+  }
+
+  /**************************/
+  /*       Below 1200px     */
+  /*   (Landscape Tablet)   */
+  /**************************/
+  @media (max-width: 75em) {
+  }
+
+  /**************************/
+  /*       Below 1024px     */
+  /**************************/
+  @media (max-width: 64em) {
+    .section-services {
+      padding: 4.8rem 0;
+    }
+  }
+
+  /**************************/
+  /*       Below 544px      */
+  /*        (Phones)        */
+  /**************************/
+  @media (max-width: 34em) {
   }
 </style>
